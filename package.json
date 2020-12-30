@@ -1,0 +1,25 @@
+{
+  "name": "utiliti-oms-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilosrj1990/utiliti-oms-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murilosrj1990/utiliti-oms-backend/issues"
+  },
+  "homepage": "https://github.com/murilosrj1990/utiliti-oms-backend#readme"
+}
