@@ -4,7 +4,11 @@
     "password": "utiliti-oms",
     "database": "oms-utiliti",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": true,
+      "underscored": true
+    }
   },
   "test": {
     "username": "root",
