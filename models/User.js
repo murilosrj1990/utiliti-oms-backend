@@ -6,8 +6,7 @@ class User extends Model {
             name: DataTypes.STRING,
             email: DataTypes.STRING,
             phone: DataTypes.STRING,
-            password: DataTypes.STRING,
-            profile_img:DataTypes.STRING
+            password: DataTypes.STRING
         },
         {
             sequelize: connection
