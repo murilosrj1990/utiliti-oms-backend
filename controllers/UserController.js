@@ -8,12 +8,20 @@ module.exports = {
     async index(req, res) {
         let limit = 5;
         let offset = 0;
-        if (req.params.page) offset = req.params.page;
-        if (req.params.limit) limit = req.params.limit;
-        let users = await User.findAll({
-            attributes: ['id', 'name', 'email', 'phone']
+        
+        if (req.query.limit) limit = req.query.limit;
+        if (req.query.page) offset = req.query.page * limit;
+
+
+        let users = await User.findAndCountAll({
+            attributes: ['id', 'name', 'email', 'phone'],
+            limit,
+            offset
         });
-        if (users) return res.json(users);
+        if (users) return res.json({
+            page: parseInt(req.query.page),
+            users,
+        });
 
         return res.status(404).json({
             message: "Users not found."
